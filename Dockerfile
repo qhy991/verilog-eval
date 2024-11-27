@@ -1,5 +1,6 @@
 FROM nvcr.io/nvidia/pytorch:22.08-py3
 LABEL maintainer="Mingjie Liu <mingjiel@nvidia.com>"
+RUN export https_proxy=http://10.130.148.166:1082 http_proxy=http://10.130.148.166:1082 
 RUN echo "alias python=python3" >> ~/.bashrc \
         && echo "alias pip=pip3" >> ~/.bashrc
 RUN apt-get -y update \
